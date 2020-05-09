@@ -1,0 +1,17 @@
+<div ngbDropdown class="d-inline-block w-100">
+    <div  id="dropdownBasic1" ngbDropdownToggle>{{title}} {{activeOption.title}}</div>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <div class="options-header">
+        {{optionsTitle}}
+      </div>
+
+      <div ngbDropdownItem *ngFor="let option of options" (click)="dropdownChanged(option)">
+        <span class="right-icon">
+            <svg *ngIf="option.isSelected" class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check" viewBox="0 0 12 16" version="1.1" width="12" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M12 5l-8 8-4-4 1.5-1.5L4 10l6.5-6.5L12 5z"></path></svg>
+        </span>
+        <span>
+          {{option.title}}
+        </span>
+      </div>
+    </div>
+  </div>

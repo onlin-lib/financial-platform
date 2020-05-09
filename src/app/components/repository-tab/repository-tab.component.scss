@@ -1,0 +1,69 @@
+@import "../../../assets/sass/app.scss";
+.repsoitories-tab-wraper{
+   
+    .reposiroies-filter{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0px 20px;
+        border-bottom: 1px solid lightgray;
+        @include small-screen{
+            flex-direction: column;
+            justify-content: center;
+            .search-filter{
+                margin-bottom: 10px;
+            }
+        }
+        .search-filter{
+            width: 100%;
+            input{
+                width: 100%;
+                min-height: 34px;
+                padding: 6px 8px;
+                font-size: 16px;
+                line-height: 20px;
+                color: $gradient;
+                vertical-align: middle;
+                background-color: $white;
+                background-repeat: no-repeat;
+                background-position: right 8px center;
+                border: 1px solid $light_gary;
+                border-radius: 3px;
+                outline: none;
+                box-shadow: inset 0 1px 2px rgba(27,31,35,.075);
+            }
+            input::placeholder{
+                color: gray;
+                font-size: 14px;
+            }
+        }
+        .type-dropdown{
+            min-width: 90px;
+            margin: 0px 15px;
+        }
+        .lang-dropdown{
+            width: 120px;
+        }
+        .new-button{
+            button{
+                width: 70px;
+                height: 34px;
+                border-radius: 3px;
+                display: flex;
+                margin: 0px 15px;
+                color: $white;
+                background-color: $green;
+                border: 1px solid gray;
+                align-items: center;
+                justify-content: center;
+            }
+            svg{
+                color: #fff;
+                fill: currentColor;
+                margin-right: 5px;
+            }
+        }
+    }
+    .repositories-containers{
+        margin-right: 15px;
+    }
+}

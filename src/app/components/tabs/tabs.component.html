@@ -1,0 +1,19 @@
+<div class="tabs-wrapper">
+    <div class="tabs-inner">
+        <span class="single-tab" [ngClass]="{'active' : activeTab.name === tab.tabName}" 
+        *ngFor="let tab of tabs" (click)="changeTab(tab)">{{tab.tabName}}</span>
+    </div>
+</div>
+
+<div class="tabs-dropdown">
+    <div ngbDropdown class="d-inline-block">
+        <div  id="dropdownBasic1" ngbDropdownToggle>{{activeTab.name}}</div>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <div ngbDropdownItem *ngFor="let tab of tabs">{{tab.tabName}}</div>
+        </div>
+      </div>
+</div>
+
+<div class="tab-content">
+    <router-outlet></router-outlet>
+</div>

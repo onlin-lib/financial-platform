@@ -1,0 +1,58 @@
+@import "../../../../assets//sass//app.scss";
+
+.row{
+    margin: 0px !important;
+    .sections{
+        padding: 30px 15px;
+        @include medium-screen{
+            padding-bottom: 0px;
+        }
+        .logo-wrapper{
+            width: 95%;
+            margin: 0px 15px;
+            border: 1px solid gainsboro;
+            @include medium-screen{
+                border: none;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            }
+            img{
+                width: 100%;
+                @include medium-screen{
+                    width: 300px;
+                }
+            }
+            .set-stauts{
+                padding: 10px;
+                color: $medium_gary !important;
+                font-size: 12px;
+            }
+        }
+        .repository-name{
+            margin: 0pc 15px;
+            padding: 16px 0px;
+            color: gray;
+            @include medium-screen{
+                text-align: center;
+            }
+        }
+        .edit-butoon{
+            margin: 0px 15px;
+            width: 95%;
+            color: $gradient;
+            background-color: $button-bakground;
+            background-image: linear-gradient(-180deg,$ligh-white,$button-bakground 90%);
+            @include medium-screen{
+                display: none;
+            }
+        }
+    }
+    .tabs-section{
+        padding: 30px 15px 30px 20px;
+        @include normal-screen{
+            padding: 0px 15px;
+        }
+    }
+}

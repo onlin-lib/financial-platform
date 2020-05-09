@@ -1,0 +1,48 @@
+@import '../../../assets/sass/app.scss';
+.tabs-wrapper{
+    padding: 5px;
+    @include small-screen{
+        display: none;
+    }
+    .tabs-inner{
+        margin-top: 10px;
+        .single-tab{
+            padding: 15px;
+            border-bottom: 1px solid $light_gary;
+            cursor: pointer;
+            color: $medium_gary;
+            font-size: 14px;
+            @include normal-screen{
+                padding: 15px 10px;
+                font-size: 12px;
+            }
+        }
+        .single-tab:hover{
+            border-bottom: 2px solid $light_gary;
+        }
+        .active{
+            font-weight: 600;
+            color: $gradient;
+            border-bottom: 2px solid $orange !important;
+        }
+        
+    }   
+}
+.tabs-dropdown{
+    display: none;
+    justify-content: center;
+    @include small-screen{
+        display: flex;
+    }
+    .dropdown{
+        width: 200px;
+        .dropdown-toggle{
+            display: flex;
+    justify-content: space-between;
+    align-items: center;
+        }
+    }
+}
+.tab-content{
+    padding: 20px 0px;
+}

@@ -1,0 +1,38 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+.centering-elment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-toggle{
+    padding: 4px 10px;
+    font-size: 14px;
+    background-color: #e9ecef;
+    background-image: none;
+    box-shadow: inset 0 0.15em 0.3em rgba(27,31,35,.15);
+    border: 1px solid rgba(27,31,35,.2);
+    border-radius: .25em;
+    color: $gradient;
+}
+.dropdown-menu{
+    min-width: 175px;
+    padding: 0px ;
+    margin: 0px;
+    .dropdown-item{
+        display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    color: $medium_gary;
+    text-align: left;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0;
+    border-bottom: 1px solid #eaecef;
+    .right-icon{
+        min-width: 20px;
+    }
+    }
+}

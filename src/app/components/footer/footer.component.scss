@@ -1,0 +1,58 @@
+@import "../../../assets/sass/app.scss";
+
+.footer-wraper{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 15px;
+    border-top: 1px solid gainsboro;
+    align-items: center;
+    color: $blue;
+    .section{
+        font-size: 12px;
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+    }
+    .logo{
+
+    }
+    @include large-screen{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .first-section{
+            width: 50% !important;
+            margin-bottom: 10px;  
+        }
+        .logo{
+            display: none;
+        }
+    }
+    @include normal-screen {
+        .first-section{
+            width: 50% !important;
+            margin-bottom: 10px;  
+        }
+        .section{
+            
+        }
+    }
+    @include medium-screen {
+        .first-section{
+            width: 80% !important;
+        }
+        .section{
+            width: 75% ;
+        }
+    }
+    @include small-screen {
+        .first-section{
+            width: 100% !important;
+            font-size: 10px;
+        }
+        .section{
+            width: 95% ;
+            font-size: 10px;  
+        }
+    }
+}
